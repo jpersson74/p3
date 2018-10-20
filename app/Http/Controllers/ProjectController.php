@@ -7,15 +7,14 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
 
-    public function index(){
-
-//index controller
-        return 'WSP Geospatial Project Tracker';
+    public function index()
+    {
+        return view('project.index');
     }
 //Search controller
-    public function searchProject(){
-
-        return 'Search for Project Data';
+    public function search()
+    {
+        return view('project.search');
     }
 
 

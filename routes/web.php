@@ -8,5 +8,5 @@ Route::get('/', 'ProjectController@index');
 
 
 
-Route::get('/search', 'ProjectController@searchProject');
+Route::get('/search', 'ProjectController@search');
 
