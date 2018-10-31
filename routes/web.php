@@ -1,7 +1,5 @@
 <?php
 
-
-
 // Main Contoller
 
 Route::post('/enter-data', 'ProjectController@enterData');

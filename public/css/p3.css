@@ -48,10 +48,9 @@ ul.searchResults {
     font-style: bold;
 }
 
-ul.errors {
+.error {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 20px;
-    list-style-type: none;
     font-style: bold;
     color: #FF0000;
 }

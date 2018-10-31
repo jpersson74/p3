@@ -58,6 +58,14 @@ class ProjectController extends Controller
 
     public function enterData(Request $request)
     {
+        $request->validate([
+
+            'projID' => 'regex:/^\d{2}[P]-.*$/',
+            'projYear' => 'required',
+            'projType' => 'required',
+            'projLoc' => 'required'
+        ]);
+
         $data = [
 
             'ProjectID' => $request['projID'],
@@ -71,8 +79,6 @@ class ProjectController extends Controller
         $dataArr = json_decode($dataToJSON, true);
 
         $dataArr[] = $data;
-
-        ##$json = json_encode($dataArr, JSON_PRETTY_PRINT);
 
         $json = json_encode($dataArr, JSON_PRETTY_PRINT);
 

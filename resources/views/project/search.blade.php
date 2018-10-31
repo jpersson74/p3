@@ -15,8 +15,11 @@
         <fieldset>
             <legend>Please enter a project ID:</legend>
             <label for='projectNum'>Project ID:</label>
-            <input type='text' id='projID' name='projID' placeholder='Example: 18P-i18847'>
+            <input type='text' id='projID' name='projID' placeholder='Example: 18P-i18847' value='{{ old('projID') }}'>
             <br>
+            @if($errors->get('projID'))
+                <div class='error'>{{ $errors->first('projID') }}</div>
+            @endif
         </fieldset>
         <br>
 
@@ -25,41 +28,57 @@
             <legend>Please select a project year:</legend>
             <select name='projYear' id='projYear'>
                 <option value='' selected='selected'>Select a Project Year</option>
-                <option value='2018'>2018</option>
-                <option value='2017'>2017</option>
-                <option value='2016'>2016</option>
-                <option value='2015'>2015</option>
-                <option value='2014'>2014</option>
-                <option value='2013'>2013</option>
-                <option value='2012'>2012</option>
-                <option value='2011'>2011</option>
-                <option value='2010'>2010</option>
-                <option value='2009'>2009</option>
-                <option value='2008'>2008</option>
-                <option value='2007'>2007</option>
-                <option value='2006'>2006</option>
-                <option value='2005'>2005</option>
-                <option value='2004'>2004</option>
-                <option value='2003'>2003</option>
-                <option value='2002'>2002</option>
-                <option value='2001'>2001</option>
-                <option value='2000'>2000</option>
+                <option value='2018'{{(old('projYear') == '2018') ? 'selected' : ''}}>2018</option>
+                <option value='2017'{{(old('projYear') == '2017') ? 'selected' : ''}}>2017</option>
+                <option value='2016'{{(old('projYear') == '2016') ? 'selected' : ''}}>2016</option>
+                <option value='2015'{{(old('projYear') == '2015') ? 'selected' : ''}}>2015</option>
+                <option value='2014'{{(old('projYear') == '2014') ? 'selected' : ''}}>2014</option>
+                <option value='2013'{{(old('projYear') == '2013') ? 'selected' : ''}}>2013</option>
+                <option value='2012'{{(old('projYear') == '2012') ? 'selected' : ''}}>2012</option>
+                <option value='2011'{{(old('projYear') == '2011') ? 'selected' : ''}}>2011</option>
+                <option value='2010'{{(old('projYear') == '2010') ? 'selected' : ''}}>2010</option>
+                <option value='2009'{{(old('projYear') == '2009') ? 'selected' : ''}}>2009</option>
+                <option value='2008'{{(old('projYear') == '2008') ? 'selected' : ''}}>2008</option>
+                <option value='2007'{{(old('projYear') == '2007') ? 'selected' : ''}}>2007</option>
+                <option value='2006'{{(old('projYear') == '2006') ? 'selected' : ''}}>2006</option>
+                <option value='2005'{{(old('projYear') == '2005') ? 'selected' : ''}}>2005</option>
+                <option value='2004'{{(old('projYear') == '2004') ? 'selected' : ''}}>2004</option>
+                <option value='2003'{{(old('projYear') == '2003') ? 'selected' : ''}}>2003</option>
+                <option value='2002'{{(old('projYear') == '2002') ? 'selected' : ''}}>2002</option>
+                <option value='2001'{{(old('projYear') == '2001') ? 'selected' : ''}}>2001</option>
+                <option value='2000'{{(old('projYear') == '2000') ? 'selected' : ''}}>2000</option>
             </select>
+            @if($errors->get('projYear'))
+                <div class='error'>{{ $errors->first('projYear') }}</div>
+            @endif
         </fieldset>
         <br>
         <fieldset>
             <legend>Please select all that apply:</legend>
-            <input type='radio' name='projType' value='Photogrammetry'>Photogrammetry<br>
-            <input type='radio' name='projType' value='Survey'>Survey<br>
-            <input type='radio' name='projType' value='GIS'>GIS<br>
-            <input type='radio' name='projType' value='Laser Scanning'>Laser Scanning<br>
+            <input type='radio'
+                   name='projType'
+                   value="1" {{(old('projType') == '1') ? 'checked' : ''}}>Photogrammetry<br>
+            <input type='radio' name='projType' value="2" {{(old('projType') == '2') ? 'checked' : ''}}>Survey<br>
+            <input type='radio' name='projType' value="3" {{(old('projType') == '3') ? 'checked' : ''}}>GIS<br>
+            <input type='radio'
+                   name='projType'
+                   value="4" {{(old('projType') == '4') ? 'checked' : ''}}>Laser Scanning<br>
+            @if($errors->get('projType'))
+                <div class='error'>{{ $errors->first('projType') }}</div>
+            @endif
         </fieldset>
         <br>
         <fieldset>
             <legend>Location:</legend>
             <label for='projLoc'>Project Location:</label>
-            <input type='text' id='projLoc' name='projLoc' placeholder='Example: Providence, RI'>
-
+            <input type='text'
+                   id='projLoc'
+                   name='projLoc'
+                   placeholder='Example: Providence, RI'
+                   value='{{ old('projLoc') }}'>
+            @if($errors->get('projLoc'))
+                <div class='error'>{{ $errors->first('projLoc') }}</div>
+            @endif
         </fieldset>
         <br>
         <input type='submit' name='save' value='Enter data'>
@@ -76,12 +95,8 @@
             <input type='text' name='projSearch' placeholder='Example: 18P-i18847' value='{{ old('projSearch') }}'>
             <br>
 
-            @if(count($errors) > 0)
-                <ul class='errors'>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+            @if($errors->get('projSearch'))
+                <div class='error'>{{ $errors->first('projSearch') }}</div>
             @endif
         </fieldset>
         <br>
@@ -101,10 +116,10 @@
             @foreach($searchResults as $projectID => $project)
                 <div class='projectResults'>
                     <ul class='searchResults'>
-                    <li>Project: {{$project['ProjectID']}}</li>
-                    <li>Location: {{$project['Location']}}</li>
-                    <li>Year: {{$project['Year']}}</li>
-                    <li>Type: {{$project['ProjectType']}}</li>
+                        <li>Project: {{$project['ProjectID']}}</li>
+                        <li>Location: {{$project['Location']}}</li>
+                        <li>Year: {{$project['Year']}}</li>
+                        <li>Type: {{$project['ProjectType']}}</li>
                     </ul>
                 </div>
 

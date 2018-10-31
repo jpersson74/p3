@@ -1,32 +1,20 @@
 [
     {
-        "ProjectID": "18P-i11111",
-        "Year": "2018",
-        "ProjectType": "Photogrammetry",
-        "Location": "Worcester, MA"
-    },
-    {
-        "ProjectID": "18P-i2222",
+        "ProjectID": "18P-i15555",
         "Year": "2017",
-        "ProjectType": "Survey",
-        "Location": "Providence, RI"
+        "ProjectType": "on",
+        "Location": "East Greenwich"
     },
     {
-        "ProjectID": "18P-i33333",
-        "Year": "2009",
-        "ProjectType": "GIS",
-        "Location": "Warwick, RI"
+        "ProjectID": "18P-i15555",
+        "Year": "2017",
+        "ProjectType": "on",
+        "Location": "East Greenwich"
     },
     {
-        "ProjectID": "18P-i77777",
-        "Year": "2002",
-        "ProjectType": "Laser Scanning",
-        "Location": "Boston, MA"
-    },
-    {
-        "ProjectID": "18P-izzzz",
+        "ProjectID": "18P-ixxxxx",
         "Year": "2018",
         "ProjectType": "Laser Scanning",
-        "Location": "Warwick"
+        "Location": "East Greenwich"
     }
 ]
