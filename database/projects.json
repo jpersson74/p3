@@ -2,115 +2,13 @@
     {
         "ProjectID": "18P-i15555",
         "Year": "2017",
-        "ProjectType": "on",
-        "Location": "East Greenwich"
+        "ProjectType": "Survey",
+        "Location": "East Greenwich, RI"
     },
     {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "on",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-ixxxxx",
-        "Year": "2018",
-        "ProjectType": "Laser Scanning",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "1",
-        "Location": "Warwick"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "1",
-        "Location": "Warwick"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "2",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-ixxxxx",
-        "Year": "2017",
-        "ProjectType": "1",
-        "Location": "Warwick"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "2",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "2",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2018",
-        "ProjectType": "2",
-        "Location": "Warwick"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2014",
-        "ProjectType": "3",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2018",
-        "ProjectType": "1",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2018",
-        "ProjectType": "1",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2018",
-        "ProjectType": "1",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2018",
-        "ProjectType": "1",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2012",
-        "ProjectType": "2",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "2",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "1",
-        "Location": "East Greenwich"
-    },
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2018",
-        "ProjectType": "1",
-        "Location": "Warwick"
+        "ProjectID": "18P-i77777",
+        "Year": "2000",
+        "ProjectType": "Photogrammetry",
+        "Location": "Boston, MA"
     }
 ]

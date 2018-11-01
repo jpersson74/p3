@@ -7,6 +7,7 @@
 @section('content')
     <img src='/images/WSP.png' id='logo' alt='WSP Logo'><h1>Geospatial Project Tracker</h1>
 
+<!-- Creates entry form -->
 
     <form method='POST' action='/enter-data'>
         {{ csrf_field() }}
@@ -17,6 +18,9 @@
             <label for='projID'>Project ID:</label>
             <input type='text' id='projID' name='projID' placeholder='Example: 18P-i18847' value='{{ old('projID') }}'>
             <br>
+
+<!-- Gets errors from error array for field-->
+
             @if($errors->get('projID'))
                 <div class='error'>{{ $errors->first('projID') }}</div>
             @endif
@@ -53,14 +57,10 @@
         <br>
         <fieldset>
             <legend>Please select all that apply:</legend>
-            <input type='radio'
-                   name='projType'
-                   value="1" {{(old('projType') == '1') ? 'checked' : ''}}>Photogrammetry<br>
-            <input type='radio' name='projType' value="2" {{(old('projType') == '2') ? 'checked' : ''}}>Survey<br>
-            <input type='radio' name='projType' value="3" {{(old('projType') == '3') ? 'checked' : ''}}>GIS<br>
-            <input type='radio'
-                   name='projType'
-                   value="4" {{(old('projType') == '4') ? 'checked' : ''}}>Laser Scanning<br>
+            <input type='radio' name='projType' value="Photogrammetry" {{(old('projType') == 'Photogrammetry') ? 'checked' : ''}}>Photogrammetry<br>
+            <input type='radio' name='projType' value="Survey" {{(old('projType') == 'Survey') ? 'checked' : ''}}>Survey<br>
+            <input type='radio' name='projType' value="GIS" {{(old('projType') == 'GIS') ? 'checked' : ''}}>GIS<br>
+            <input type='radio' name='projType' value="Laser Scanning" {{(old('projType') == 'Laser Scanning') ? 'checked' : ''}}>Laser Scanning<br>
             @if($errors->get('projType'))
                 <div class='error'>{{ $errors->first('projType') }}</div>
             @endif
@@ -69,11 +69,7 @@
         <fieldset>
             <legend>Location:</legend>
             <label for='projLoc'>Project Location:</label>
-            <input type='text'
-                   id='projLoc'
-                   name='projLoc'
-                   placeholder='Example: Providence, RI'
-                   value='{{ old('projLoc') }}'>
+            <input type='text' id='projLoc' name='projLoc' placeholder='Example: Providence, RI' value='{{ old('projLoc') }}'>
             @if($errors->get('projLoc'))
                 <div class='error'>{{ $errors->first('projLoc') }}</div>
             @endif
@@ -82,6 +78,9 @@
         <input type='submit' name='save' value='Enter data'>
         <br>
         <br>
+
+<!-- Displays success message upon form validation and submission -->
+
         @if (\Session::has('success'))
             <div class="noError">
                 {!! \Session::get('success') !!}
@@ -90,12 +89,18 @@
         <br>
 
     </form>
+
+<!-- Creates search form -->
+
     <form method='GET' action='/search-process'>
         <fieldset>
             <legend>Search for project information here:</legend>
             <label for='projSearch'>Search by Project ID: </label>
             <input type='text' id='projSearch' name='projSearch' placeholder='Example: 18P-i18847' value='{{ old('projSearch') }}'>
             <br>
+
+<!-- Displays any search errors -->
+
             @if($errors->get('projSearch'))
                 <div class='error'>{{ $errors->first('projSearch') }}</div>
             @endif
@@ -104,6 +109,9 @@
         <input type='submit' name='search' value='Search Projects'>
         <br>
     </form>
+
+<!-- Displays results-->
+
     @if($projSearch)
         <p>Here are your results:</p>
         @if(count($searchResults) == 0)
