@@ -143,4 +143,18 @@ return [
 
     'attributes' => [],
 
+    'custom' => [
+        'projYear' => [
+            'required' => 'You must select a project year.',
+        ],
+
+        'projType' => [
+            'required' => 'You must select a project type.',
+        ],
+
+        'projLoc' => [
+            'required' => 'You must enter a project location.',
+        ],
+    ]
+
 ];

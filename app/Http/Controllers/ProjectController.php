@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
 
-    public function search(Request $request)
+    public function index(Request $request)
     {
-        return view('project.search')->with([
+        return view('project.index')->with([
             'projSearch' => $request->session()->get('projSearch', ''),
 
             'searchResults' => $request->session()->get('searchResults', []),
@@ -46,10 +46,7 @@ class ProjectController extends Controller
             }
         }
 
-        # Redirect back to the search page w/ the searchTerm *and* searchResults (if any) stored in the session
-        # Ref: https://laravel.com/docs/redirects#redirecting-with-flashed-session-data
-
-        return redirect('/search')->with([
+        return redirect('/')->with([
             'projSearch' => $projSearch,
 
             'searchResults' => $searchResults
@@ -82,10 +79,15 @@ class ProjectController extends Controller
 
         $json = json_encode($dataArr, JSON_PRETTY_PRINT);
 
-//Adds new data to JSON file
+        //Adds new data to JSON file
 
         file_put_contents(database_path('/projects.json'), $json);
+
+        //return back();
+
+        return redirect()->back()->with('success', 'Thanks for submitting!');
     }
+
 }
 
 
