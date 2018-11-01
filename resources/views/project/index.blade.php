@@ -14,7 +14,7 @@
         <p> Enter project information below:</p>
         <fieldset>
             <legend>Please enter a project ID:</legend>
-            <label for='projectNum'>Project ID:</label>
+            <label for='projID'>Project ID:</label>
             <input type='text' id='projID' name='projID' placeholder='Example: 18P-i18847' value='{{ old('projID') }}'>
             <br>
             @if($errors->get('projID'))
@@ -94,7 +94,7 @@
         <fieldset>
             <legend>Search for project information here:</legend>
             <label for='projSearch'>Search by Project ID: </label>
-            <input type='text' name='projSearch' placeholder='Example: 18P-i18847' value='{{ old('projSearch') }}'>
+            <input type='text' id='projSearch' name='projSearch' placeholder='Example: 18P-i18847' value='{{ old('projSearch') }}'>
             <br>
             @if($errors->get('projSearch'))
                 <div class='error'>{{ $errors->first('projSearch') }}</div>
