@@ -1,20 +1,14 @@
 [
-    {
-        "ProjectID": "18P-i15555",
-        "Year": "2017",
-        "ProjectType": "Survey",
-        "Location": "East Greenwich, RI"
-    },
-    {
-        "ProjectID": "18P-i77777",
-        "Year": "2000",
-        "ProjectType": "Photogrammetry",
-        "Location": "Boston, MA"
-    },
-    {
-        "ProjectID": "10P-i00000",
-        "Year": "2018",
-        "ProjectType": "Laser Scanning",
-        "Location": "Providence, RI"
-    }
+  {
+    "ProjectID": "18P-i15555",
+    "Year": "2017",
+    "ProjectType": "Survey",
+    "Location": "East Greenwich, RI"
+  },
+  {
+    "ProjectID": "18P-i77777",
+    "Year": "2000",
+    "ProjectType": "Photogrammetry",
+    "Location": "Boston, MA"
+  }
 ]
