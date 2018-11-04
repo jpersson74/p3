@@ -12,7 +12,7 @@
     <form method='POST' action='/enter-data'>
         {{ csrf_field() }}
 
-        <p> Enter project information below:</p>
+        <p> Please enter project information below or use search tool at bottom to look for project data:</p>
         <fieldset>
             <legend>Please enter a project ID:</legend>
             <label for='projID'>Project ID:</label>

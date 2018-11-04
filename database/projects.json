@@ -10,5 +10,11 @@
         "Year": "2000",
         "ProjectType": "Photogrammetry",
         "Location": "Boston, MA"
+    },
+    {
+        "ProjectID": "10P-i00000",
+        "Year": "2018",
+        "ProjectType": "Laser Scanning",
+        "Location": "Providence, RI"
     }
 ]
