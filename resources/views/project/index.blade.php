@@ -96,7 +96,7 @@
         <fieldset>
             <legend>Search for project information here:</legend>
             <label for='projSearch'>Search by Project ID: </label>
-            <input type='text' id='projSearch' name='projSearch' placeholder='Example: 18P-i18847' value='{{ old('projSearch') }}'>
+            <input type='text' id='projSearch' name='projSearch' placeholder='Example: 18P-i18847' value='{{ old('projSearch', $projSearch) }}'>
             <br>
 
 <!-- Displays any search errors -->
