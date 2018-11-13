@@ -6,8 +6,6 @@
 
 
 ## 1. Interface
-Address as many of the following points as applicable:
-
 
 My first impression in regards to the site interface was a bit of confusion. What am I logging into? What's the purpose of this site? The user is presented with a login screen without any prompts or directions.
 
@@ -23,18 +21,18 @@ I would suggest having a short intro to let the user know what the site is about
 Here's what I tried for functional testing:
 
 Submitting the empty form:
-    The form responded as expected giving me errors in the appropriate places. 
+   - The form responded as expected giving me errors in the appropriate places. 
 
 Submitting the form with partial data:
-    The validation worked as expected, I received errors on the empty fields and the form retained my previous data. 
+   - The validation worked as expected, I received errors on the empty fields and the form retained my previous data. 
     
 Submitting the form with various data types:
-    I submitted the form with some combinations of rather large numbers, negative numbers, player names with symbols and numbers and game names with symbols and numbers. It looks like the player name can accept alpha|numeric so that validated as expected. It looks like you can pass extremely large scores - I'm wondering if you want to place a limit of the amount of digits you can enter? Otherwise, this field validated correctly because I was unable to enter anything but digits. The game name field accepts just about anything - symbol, number and alpha. Not sure if that was intended?
+   - I submitted the form with some combinations of rather large numbers, negative numbers, player names with symbols and numbers and game names with symbols and numbers. It looks like the player name can accept alpha|numeric so that validated as expected. It looks like you can pass extremely large scores - I'm wondering if you want to place a limit of the amount of digits you can enter? Otherwise, this field validated correctly because I was unable to enter anything but digits. The game name field accepts just about anything - symbol, number and alpha. Not sure if that was intended?
 
-I tried accessing the site via a faulty url *<http://p3.pizzuta.com/games2>* and I received the appropriate generic 404 page that comes with Laravel with an option to return to the Login page.
+I tried accessing the site via a faulty url: *<http://p3.pizzuta.com/games2>* and I received the appropriate generic 404 page that comes with Laravel with an option to return to the Login page.
 
 Other things I tried:
-    Clicking on individual users - not available as a link. Maybe a future enhancement?
+  - Clicking on individual users - not available as a link. Maybe a future enhancement?
     
 
 ## 3. Code: Routes
@@ -49,8 +47,9 @@ All your view files looked great. I really liked how you used modules for each c
 
 All in all I think your code is solid and looks good. Code generally follows data best practices.  Here are some suggestions:
 
-    - Besides the name of the Controller there is little to no commenting or explanation as to what the code is executing. Some simple comments would help      other programmers understand what you are doing.
-    - There are a number of commented out dump statements in the Controllers that were probably used for testing that can be omitted from the production        code. 
+- Besides the name of the Controller there is little to no commenting or explanation as to what the code is executing. Some simple comments would help other programmers understand what you are doing.
+
+- There are a number of commented out dump statements in the Controllers that were probably used for testing that can be omitted from the production code. 
 
 
 ## 6. Misc
