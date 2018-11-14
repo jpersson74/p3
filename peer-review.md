@@ -49,7 +49,9 @@ All in all I think your code is solid and looks good. Code generally follows dat
 
 - Besides the name of the Controller there is little to no commenting or explanation as to what the code is executing. Some simple comments would help other programmers understand what you are doing.
 
-- There are a number of commented out dump statements in the Controllers that were probably used for testing that can be omitted from the production code. 
+- There are a number of commented out dump statements in the Controllers that were probably used for testing that can be omitted from the production code.
+
+- I ran your url through the [W3 Validator](https://validator.w3.org/nu/?doc=http%3A%2F%2Fp3.pizzuta.com%2F) and there were about a dozen or so errors and warnings in the html.
 
 
 ## 6. Misc
